@@ -11,7 +11,7 @@ public class Testing {
 
 
         // Trie dictionary = new Trie(Arrays.asList("danish","zuhaib","dan","dany","hello"));
-        Trie dictionary = new Trie(new String[]{"danish","zuhaib","dan","dany","hello"});
+        Trie dictionary = new Trie(new String[]{"danishzu","zuhaib","dan","dany","hello"});
         System.out.println(dictionary.contains("d"));
         System.out.println(dictionary.contains("dan"));
         System.out.println(dictionary.containsWord("dan"));
@@ -19,5 +19,6 @@ public class Testing {
         System.out.println(dictionary.containsWord("dani"));
         dictionary.insert("dani");
         System.out.println(dictionary.containsWord("dani"));
+        System.out.println(dictionary.noOfCharactersMatched("danishzuhaib"));
     }
 }

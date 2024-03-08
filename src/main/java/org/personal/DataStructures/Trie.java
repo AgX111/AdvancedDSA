@@ -72,6 +72,18 @@ public class Trie {
         }
         return curr.getIsEndOfWord();
     }
+    public int noOfCharactersMatched(String key){
+        int count = 0;
+        TrieNode curr = this.root;
+        for(char c: key.toCharArray()){
+            if(!curr.getChildren().containsKey(c)){
+                return count;
+            }
+            curr = curr.getChildren().get(c);
+            count++;
+        }
+        return count;
+    }
 
     
 }
