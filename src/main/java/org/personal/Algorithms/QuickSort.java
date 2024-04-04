@@ -6,11 +6,10 @@ public class QuickSort {
     }
     public static void partition(int[] nums, int l, int h){
         if(l>=h) return;
-        int n = nums.length;
         int pivot_index = (l+h)/2;
         int pivot = nums[pivot_index];
         int i = l, j = l;
-        while(j<n){
+        while(j<=h){
             if(nums[j]<pivot){
                 if(nums[i]==pivot)
                     pivot_index = j;
