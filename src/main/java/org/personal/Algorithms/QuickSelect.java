@@ -1,6 +1,9 @@
 package org.personal.Algorithms;
 
+import java.util.Random;
+
 public class QuickSelect {
+    private static Random random = new Random();
     public static int selectLargest(int[] nums, int k){
         // If Kth Largest Element is required, then K = nums.length - K
         return partition(nums, 0, nums.length-1, nums.length-k);
@@ -12,7 +15,8 @@ public class QuickSelect {
     public static int partition(int[] nums, int l, int h, int k){
         // l will never be greater than h
         if(l==h && l==k) return nums[k];
-        int pivot_index = (l+h)/2;
+        // Random pivot selected to avoid worst case time complexity
+        int pivot_index = random.nextInt(h-l+1)+l;
         int pivot = nums[pivot_index];
         int i = l, j = l;
         while(j<=h){
@@ -36,10 +40,5 @@ public class QuickSelect {
         int temp = nums[x];
         nums[x] = nums[y];
         nums[y] = temp;
-    }
-    public static void main(String[] args){
-        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println(selectLargest(nums, 8));
-        System.out.println(selectSmallest(nums, 8));
     }
 }
