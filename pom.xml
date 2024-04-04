@@ -15,15 +15,20 @@
     </properties>
 
     <dependencies>
-        <!-- Other dependencies may be present -->
-
         <!-- Apache Commons Collections -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
             <version>4.4</version> <!-- Use the latest version available -->
         </dependency>
+
+        <!-- JUnit 5 dependency -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
-
-
 </project>
